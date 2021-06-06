@@ -1,0 +1,434 @@
+# 判读年龄
+# age = int(input("请输入您的年龄："))
+# if 0 <= age <= 150:
+#     print("成年") if age >=18 else print("未成年")
+# else:
+#     print("这不是人")
+
+# for循环重复（0，100）的所有奇数
+"""for i in range(0,101):
+    if i % 2 ==0:
+        continue
+    print(i)"""
+
+# while循环
+"""i =0
+while i <=100:
+    print(i)
+    i +=2"""
+# while1到100的和
+"""sum = 0
+i =0
+while i<100:
+    i +=1
+    sum +=i
+print(sum)"""
+# for循环
+"""sum = 0
+for i in range(1,101):
+    sum +=i
+print(sum)"""
+# （0，1000）中个位数为2，且可以被3整除的数有多少个
+'''num = 0
+for i in range(0,1001):
+    if i % 10 ==2 and i % 3 ==0:
+        num +=1
+print(num)'''
+
+# 求一个正整数是几位数
+'''n = int(input("请输入一个正整数："))
+i = 0
+while n // (10 ** i)>0:
+    i +=1
+print("这个是{}位数".format(i))'''
+
+# 打印水仙花数
+'''for i in range(100,1000):
+    a = i //100
+    b = (i-a*100) //10
+    c = i % 10
+    if a **3 +b**3 +c **3 ==i:
+        print(i)'''
+
+# 到0就停止
+"""num = int(input("请输入一个数字："))
+while num != 0:
+    num = int(input("请输入一个数字："))
+print("结束")"""
+
+"""num = int(input("请输入一个数字："))
+while True:
+    if num == 0:
+        break
+    num = int(input("请输入一个数字："))
+print("结束")"""
+
+'''while True:
+    num = int(input("请输入一个数字："))
+    if num ==0:
+        break
+print("结束")'''
+
+# 写出所有的素数（100,1000），
+'''for i in range(100,1001):
+    for a in range(2,i):
+        if i % a ==0 :
+            break
+    else:
+        print(i)'''
+
+# 求斐波那契数列第n项
+'''a = 1
+b = 1
+n = int(input("请输入位次："))
+if n == 1 or n == 2:
+    print("1")
+else:
+    for i in range(0,n-2):
+       c = a
+       a = b
+       b = b + c
+    print(b)
+'''
+# 打印矩阵（9*9）
+'''for i in range(1,10):
+    print("* "* 9)
+'''
+
+# 打印三角形（9*9）
+'''for i in range(1,10):
+    print("* "* i)'''
+
+# 输出九九乘法表(while)
+'''j =0
+while j < 9:
+    j += 1
+    i = 0
+    while i < j:
+        i += 1
+        print(i,"*",j,"=",i*j,sep = "",end = "\t")
+    print()'''
+
+# 九九乘法表（for）
+'''for i in range(0,10):
+    for j in range(1,i+1):
+        print(j,"*",i,"=",i*j,end ="\t",sep = '')
+    print()
+'''
+
+# 大马3匹，中马2匹，小马0.5匹，共100匹
+'''for a in range(1,101):
+    for b in range(1,101):
+        c = 100-a-b
+        if a*3 +b*2 +c*0.5 == 100:
+            print(a,b,c)'''
+
+# 一张纸0.08mm,对折多少次可以超过珠穆朗玛峰（8848.13m）
+'''i = 0
+while 0.08 * (2 ** i ) < 8844.13*100*10:
+    i += 1
+print(i)'''
+
+'''
+height = 0.08/1000
+i = 0
+while True:
+     height *= 2
+     i += 1
+     if height >= 8848.13:
+         break
+
+print(i)
+'''
+# 添加人物，有的则显示已存在
+'''names = ['jack', '张三', '李四', '王五']
+name = input('请输入用户名：')
+for i in names:
+    if name == i:
+        print('该用户已存在')
+        break
+else:
+    names.append(name)
+    print(names)'''
+
+# 冒泡排序
+'''num = [6, 5, 3, 7, 8, 1, 2, 4]
+
+j = 0
+while j < len(num) :
+    j += 1
+    i = 0
+    while i < len(num) - 1:
+        if num[i] > num[i + 1]:
+            num[i], num[i + 1] = num[i + 1], num[i]
+        i += 1
+print(num)'''
+
+# 优化
+'''num = [6, 5, 3, 7, 8, 1, 2, 4]
+j = 0
+while j < len(num):
+    j += 1
+    i = 0
+    while i < len(num) - j:
+        if num[i] > num[i + 1]:
+            num[i], num[i + 1] = num[i + 1], num[i]
+        i += 1
+
+print(num)
+'''
+
+# 求列表的最大数
+num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 666, 11, 22, 33, 5, 11, 222, ]
+'''num.sort()
+print(num[-1])'''
+
+'''
+num.sort(reverse =True)
+print(num[0])
+'''
+
+'''x = num[0]
+for i in num:
+    if i > x:
+        x = i
+print(x)
+'''
+
+# 用字典表示一个字符出现的次数
+'''new = ['a','s','d','a','s','f']
+dict = {}
+for i in new:
+    if i in dict:
+        dict[i] += 1
+    else:
+        dict[i] = 1
+print(dict)
+'''
+
+# 或者
+'''
+new = ['a','s','d','a','s','f']
+dict = {}
+for i in new:
+    if i not in dict:
+        dict[i] = new.count(i)
+print(dict)
+
+'''
+# 在字典里k和v变换位置
+'''dict1 = {'a': 100, 'b': 200, 'c': 300}
+dict2 = {}
+for k,v in dict1.items():
+    dict2[v] = k
+print(dict2)
+'''
+# 或者
+'''dict1 = {'a': 100, 'b': 200, 'c': 300}
+dict2 ={v:k for k,v in dict1.items()}
+print(dict2)'''
+
+# 定义一个函数，求n到m之间的数字之和
+'''def add(num_1, num_2):
+    sum = (num_1 + num_2) * (num_2 - num_1 + 1) / 2
+    return sum
+
+print(add(1, 100))'''
+# 或者
+'''def add(n,m):
+    x = 0
+    for i in range(n,m):
+        x += i
+    return x
+
+
+print(add(1, 101))
+'''
+
+# 计算m阶乘的和
+'''def fac(m):
+    x = 1
+    y = 0
+    for i in range(1, m + 1):
+        x *= i
+        y += x
+    return x, y
+
+
+print(fac(3)[1])'''
+
+# 求斐波那契数列的第n个值，其中n是正整数1,1,2,3,5,8,13,21
+'''
+while True:
+    n = int(input('请输入一个正整数：'))
+    if n > 0:
+        break
+    print('请输入一个正整数')
+
+a = 1
+b = 1
+c = 0
+i = 2
+if n == 1 or n == 2:
+    print(a)
+else:
+    while i < n:
+        i += 1
+        c = a + b
+        a = b
+        b = c
+print(c)
+'''
+
+#
+# age = 23
+# message = 'happy '+str(age)+'rd birthday'
+# print(message)
+#
+
+# import this
+# guests = ['jack', 'amy', 'mack']
+# guests[0] = 'tony'
+# print(guests)
+# guests.append('nancy')
+# print(guests)
+# for guest in guests:
+#     print('Dear ' + guest + ',welcome to here')
+# i = 0
+# while i <1:
+#     guests.pop()
+#     i += 1
+#     print('dear '+guests.pop()+' i am sorry')
+# for guest in guests:
+#     print(guest+', you are still welcomed')
+# del guests[0]
+# del guests[0]
+# print(guests)
+
+
+#
+# class Dog():
+#     def __init__(self,name,age):        #显示狗类的名字加年龄及待加的属性
+#         self.name = name
+#         self.age = age
+#
+#     #加入简易动作代码
+#     def sit(self):
+#         print('cool'+ self.name+'sit down')
+#
+# my_dog = Dog('silly',6)
+# print("my dog's name is "+ my_dog.name.title() + ',')
+# print("and it's age is " + str(my_dog.age) + ' years old.')
+
+
+# 猜心中的数字，每错一次有提示，总共有三次机会，成功则输出“答对了”，三次机会用完则输出“失败了”
+'''
+import random
+
+n = random.randint(1, 10)
+num_input = int(input('请猜猜我的数字是什么：（是正整数）'))
+i = 1
+while num_input < 1 or num_input > 9:
+    print('请输入一个1到9的数字')
+    num_input = int(input())
+
+while n != num_input and i < 3:
+    i += 1
+    if n < num_input:
+        print("欸，大了大了。")
+    else:
+        print("欸，小了小了")
+    num_input = int(input('再来一次：'))
+    continue
+if n != num_input:
+    print('你没有机会了。')
+else:
+    print('答对了，你想要什么奖励？')
+while True:
+    if input == quit:
+        break
+        '''
+
+'''
+def full_name(first, last, middle=''):
+    if middle:
+        full_name = first + ' ' + middle + ' ' + last
+    else:
+        full_name = first + ' ' + last
+    return full_name
+
+
+print(full_name('zhang', 'li', 'wang'))
+'''
+# import os
+
+# sys模块
+# import sys
+# exit(100)
+
+# 定义一个类（人）,并让不同的对象进行不同的行为
+'''
+
+class Student:
+    def __init__(self, name, age, height, hobby):
+        self.name = name
+        self.age = age
+        self.height = height
+        self.hobby = hobby
+
+    def run(self):
+        print(self.name + '正在跑步.')
+
+    def eat(self):
+        print(self.name + '正在吃东西')
+
+
+student1 = Student('zhangsan','18','180','plays games')
+student1.run()
+'''
+'''
+s = list(range(12))
+print(s)
+'''
+
+# 最初的起点，打印99乘法表(for循环)
+'''
+
+for i in range(1, 10):
+        for j in range(1,i+1):
+
+            print(j, '*', i, '=', i * j,end ='\t',sep ='')
+        print()
+
+'''
+
+#点菜系统
+'''
+requested_toppings = []
+while True:
+    basket = input('请输入：')
+    print('按q完成并退出选料')
+    if basket == 'q':
+        basket = None
+        break
+
+    requested_toppings.append(basket)
+
+if not requested_toppings:
+    print("Are you sure you want a plain pizza?")
+else:
+    for top in requested_toppings:
+        if "青椒" in requested_toppings :
+            print("对不起，青椒用完了!")
+            requested_toppings.remove('青椒')
+        if "蘑菇" in requested_toppings:
+            print("对不起，蘑菇用完了！")
+            requested_toppings.remove('蘑菇')
+    for top in requested_toppings:
+        print("Adding " + top + ".")
+
+    print("Finished making your pizza.")
+
+'''
+
+
